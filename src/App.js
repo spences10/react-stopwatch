@@ -6,7 +6,7 @@ import Counter from './components/Counter'
 import Start from './components/Start'
 import Clear from './components/Clear'
 
-const state = { lapse: 0, runnung: true }
+const state = { lapse: 0, running: true }
 
 class App extends Component {
   render() {
@@ -19,11 +19,14 @@ class App extends Component {
         <p className="App-intro">
           Bootstrapped with `create-react-app`.
         </p>
+        <p className="App-moar">
+          Components styled with styled components.
+        </p>
         <div>
-          <Counter lapse={20}  />
+          <Counter lapse={state.lapse}  />
         </div>
         <div>
-          <Start running={true}/>
+          <Start running={state.running}/>
           <Clear />
         </div>
       </div>
