@@ -13,7 +13,7 @@ const Button = styled.button`
 
 class Start extends Component {
   render() {
-    return <Button>Start</Button>
+    return <Button>{this.props.running ? 'Stop' : 'Strat'}</Button>
   }
 }
 

@@ -23,7 +23,7 @@ class App extends Component {
           <Counter lapse={20} />
         </div>
         <div>
-          <Start />
+          <Start running={false}/>
           <Clear />
         </div>
       </div>
