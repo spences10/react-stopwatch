@@ -6,6 +6,8 @@ import Counter from './components/Counter'
 import Start from './components/Start'
 import Clear from './components/Clear'
 
+const state = { lapse: 0, rinnung: false }
+
 class App extends Component {
   render() {
     return (
@@ -18,7 +20,7 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <div>
-          <Counter />
+          <Counter lapse={20} />
         </div>
         <div>
           <Start />
