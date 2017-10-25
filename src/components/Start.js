@@ -5,7 +5,7 @@ const Button = styled.button`
   font-size: 2em;
   border-radius: 3px;
   padding: 1em;
-  margin: 2em;
+  margin: 1em;
   background: transparent;
   color: palevioletred;
   border: 2px solid palevioletred;
