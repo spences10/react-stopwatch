@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import logo from './logo.svg'
 import './App.css'
 
-import Label from './components/Label'
+import Counter from './components/Counter'
 import Start from './components/Start'
 import Clear from './components/Clear'
 
@@ -17,7 +17,7 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <Label />
+        <Counter />
         <Start />
         <Clear />
       </div>
