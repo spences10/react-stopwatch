@@ -1,10 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 class Clear extends Component {
   render() {
-    return (
-      <button>Clear</button> 
-    )
+    return <button>Clear</button>
   }
 }
 
