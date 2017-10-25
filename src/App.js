@@ -6,7 +6,7 @@ import Counter from './components/Counter'
 import Start from './components/Start'
 import Clear from './components/Clear'
 
-const state = { lapse: 0, rinnung: false }
+const state = { lapse: 0, runnung: true }
 
 class App extends Component {
   render() {
@@ -14,16 +14,16 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <h1 className="App-title">Welcome to React Stopwatch</h1>
         </header>
         <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
+          Bootstrapped with `create-react-app`.
         </p>
         <div>
-          <Counter lapse={20} />
+          <Counter lapse={20}  />
         </div>
         <div>
-          <Start running={false}/>
+          <Start running={true}/>
           <Clear />
         </div>
       </div>
