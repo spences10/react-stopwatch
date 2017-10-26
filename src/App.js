@@ -5,6 +5,7 @@ import './App.css'
 import Counter from './components/Counter'
 import Start from './components/Start'
 import Clear from './components/Clear'
+import Stopwatch from './components/Stopwatch'
 
 const state = { lapse: 0, running: false }
 
@@ -28,6 +29,9 @@ class App extends Component {
         <div>
           <Start running={state.running} />
           <Clear />
+        </div>
+        <div>
+          <Stopwatch />
         </div>
       </div>
     )
