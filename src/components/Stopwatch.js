@@ -12,7 +12,7 @@ class Stopwatch extends React.Component {
         this.timer = setInterval(() => {
           this.setState(
             {
-              lapse: Date.now() - startTime,
+              lapse: Date.now() - startTime
             },
             () => {
               console.log(this.state.lapse)
@@ -41,7 +41,7 @@ class Stopwatch extends React.Component {
       fontSize: '2em',
       padding: 15,
       margin: 5,
-      width: 200,
+      width: 200
     }
     return (
       <div style={{ textAlign: 'center' }}>

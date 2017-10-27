@@ -21,7 +21,7 @@ class Start extends Component {
         this.timer = setInterval(() => {
           this.setState(
             {
-              lapse: Date.now() - startTime,
+              lapse: Date.now() - startTime
             },
             () => {
               console.log(this.state.lapse)
