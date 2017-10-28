@@ -1,4 +1,25 @@
 import React, { Component } from 'react'
+import styled from 'styled-components'
+
+const Button = styled.button`
+  font-size: 2em;
+  border-radius: 3px;
+  padding: 1em;
+  margin: 1em;
+  background: transparent;
+  color: palevioletred;
+  border: 2px solid palevioletred;
+`
+
+const Label = styled.label`
+  font-size: 4em;
+  border-radius: 3px;
+  // padding: 1em;
+  margin: 2em;
+  background: transparent;
+  color: palevioletred;
+  // border: 2px solid palevioletred;
+`
 
 class Stopwatch extends React.Component {
   state = { lapse: 0, running: false }
@@ -45,13 +66,13 @@ class Stopwatch extends React.Component {
     }
     return (
       <div style={{ textAlign: 'center' }}>
-        <label style={{ fontSize: '5em', display: 'block' }}>{lapse}ms</label>
-        <button style={buttonStyles} onClick={this.handleRunClick}>
+        <Label>{lapse}ms</Label>
+        <Button onClick={this.handleRunClick}>
           {running ? 'Stop' : 'Start'}
-        </button>
-        <button style={buttonStyles} onClick={this.handleClearClick}>
+        </Button>
+        <Button onClick={this.handleClearClick}>
           Clear
-        </button>
+        </Button>
       </div>
     )
   }
