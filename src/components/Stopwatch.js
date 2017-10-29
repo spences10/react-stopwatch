@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 
 const Button = styled.button`
@@ -55,14 +55,6 @@ class Stopwatch extends React.Component {
 
   render() {
     const { lapse, running } = this.state
-    const buttonStyles = {
-      border: '1px solid #ccc',
-      background: '#fff',
-      fontSize: '2em',
-      padding: 15,
-      margin: 5,
-      width: 200
-    }
     return (
       <div>
         <div>
