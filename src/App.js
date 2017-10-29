@@ -2,9 +2,6 @@ import React, { Component } from 'react'
 import logo from './logo.svg'
 import './App.css'
 
-import Counter from './components/Counter'
-import Start from './components/Start'
-import Clear from './components/Clear'
 import Stopwatch from './components/Stopwatch'
 
 const state = { lapse: 0, running: false }
@@ -23,13 +20,6 @@ class App extends Component {
         </header>
         <p className="App-intro">Bootstrapped with `create-react-app`.</p>
         <p className="App-moar">Components styled with styled components.</p>
-        <div>
-          <Counter lapse={state.lapse} />
-        </div>
-        <div>
-          <Start running={state.running} />
-          <Clear />
-        </div>
         <div>
           <Stopwatch />
         </div>

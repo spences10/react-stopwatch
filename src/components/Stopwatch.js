@@ -17,6 +17,7 @@ const Label = styled.label`
   margin: 2em;
   background: transparent;
   color: palevioletred;
+  text-allign: center:
 `
 
 class Stopwatch extends React.Component {
