@@ -14,11 +14,9 @@ const Button = styled.button`
 const Label = styled.label`
   font-size: 4em;
   border-radius: 3px;
-  // padding: 1em;
   margin: 2em;
   background: transparent;
   color: palevioletred;
-  // border: 2px solid palevioletred;
 `
 
 class Stopwatch extends React.Component {
@@ -65,14 +63,16 @@ class Stopwatch extends React.Component {
       width: 200
     }
     return (
-      <div style={{ textAlign: 'center' }}>
-        <Label>{lapse}ms</Label>
-        <Button onClick={this.handleRunClick}>
-          {running ? 'Stop' : 'Start'}
-        </Button>
-        <Button onClick={this.handleClearClick}>
-          Clear
-        </Button>
+      <div>
+        <div>
+          <Label>{lapse}ms</Label>
+        </div>
+        <div>
+          <Button onClick={this.handleRunClick}>
+            {running ? 'Stop' : 'Start'}
+          </Button>
+          <Button onClick={this.handleClearClick}>Clear</Button>
+        </div>
       </div>
     )
   }

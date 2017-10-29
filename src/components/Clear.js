@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 
-const Button = styled.button`
+const Button = styled.a`
   font-size: 2em;
   border-radius: 3px;
   padding: 1em;
