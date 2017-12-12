@@ -19,6 +19,6 @@
     "format"
   ],
   "devDependencies": {
-    "prettier": "1.9.1"
+    "prettier": "1.9.2"
   }
 }
