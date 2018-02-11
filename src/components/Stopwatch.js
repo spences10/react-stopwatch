@@ -2,22 +2,23 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Button = styled.button`
-  font-size: 2em;
+  font-size: 2rem;
   border-radius: 3px;
-  padding: 1em;
-  margin: 1em;
+  padding: 1rem;
+  margin: 1rem;
   background: transparent;
   color: palevioletred;
   border: 2px solid palevioletred;
+  border-radius: 4px;
 `
 
 const Label = styled.label`
-  font-size: 4em;
+  font-size: 4rem;
   border-radius: 3px;
-  margin: 2em;
+  margin: 2rem;
   background: transparent;
   color: palevioletred;
-  text-allign: center:
+  text-align: center;
 `
 
 class Stopwatch extends React.Component {
