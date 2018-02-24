@@ -9,12 +9,16 @@ const Button = styled.button`
   background: transparent;
   color: palevioletred;
   border: 2px solid palevioletred;
-  border-radius: 4px;
+  border-radius: 10px;
+  &:hover {
+    transform: translateY(-3px);
+    transition: all 0.2s;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.8);
+  }
 `
 
 const Label = styled.label`
   font-size: 4rem;
-  border-radius: 3px;
   margin: 2rem;
   background: transparent;
   color: palevioletred;
