@@ -1,4 +1,4 @@
-import styled, { injectGlobal, css } from 'styled-components'
+import { injectGlobal, css } from 'styled-components'
 
 export const theme = {
   black: '#7d95b6',
@@ -34,6 +34,7 @@ injectGlobal`
 
   body {
     margin: 0;
+    padding:0;
     font-family: 'Roboto', georgia, serif;
     word-wrap: break-word;
     background-color: #fafafa;
