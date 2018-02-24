@@ -18,7 +18,7 @@ const AppHeader = styled.div`
 const AppTitle = styled.h1``
 
 const AppLogo = styled.img`
-  animation: App-logo-spin infinite 20s linear;
+  animation: App-logo-spin infinite 120s linear;
   height: 80px;
   @keyframes App-logo-spin {
     from {
