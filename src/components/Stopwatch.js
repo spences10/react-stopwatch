@@ -3,12 +3,11 @@ import styled from 'styled-components'
 
 const Button = styled.button`
   font-size: 2rem;
-  border-radius: 3px;
   padding: 1rem;
   margin: 1rem;
   background: transparent;
-  color: palevioletred;
-  border: 2px solid palevioletred;
+  color: ${props => props.theme.dark};
+  border: 2px solid ${props => props.theme.dark};
   border-radius: 10px;
   &:hover {
     transform: translateY(-3px);
@@ -21,7 +20,7 @@ const Label = styled.label`
   font-size: 4rem;
   margin: 2rem;
   background: transparent;
-  color: palevioletred;
+  color: ${props => props.theme.dark};
   text-align: center;
 `
 
