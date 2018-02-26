@@ -40,8 +40,7 @@ const AppIntro = styled.p`
 `
 
 const EmojiWrapper = styled.span.attrs({
-  role: 'img',
-  ariaLabel: 'nail polish'
+  role: 'img'
 })``
 
 const CodeWrapper = styled.code`
@@ -65,7 +64,7 @@ class App extends Component {
         <AppIntro>
           Components styled with{' '}
           <CodeWrapper>styled-components</CodeWrapper>{' '}
-          <EmojiWrapper>💅</EmojiWrapper>
+          <EmojiWrapper aria-label="nail polish">💅</EmojiWrapper>
         </AppIntro>
         <ComponentWrapper>
           <Stopwatch />
