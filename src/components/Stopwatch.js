@@ -34,14 +34,9 @@ class Stopwatch extends React.Component {
       } else {
         const startTime = Date.now() - state.lapse
         this.timer = setInterval(() => {
-          this.setState(
-            {
-              lapse: Date.now() - startTime
-            },
-            () => {
-              console.log(this.state.lapse)
-            }
-          )
+          this.setState({
+            lapse: Date.now() - startTime
+          })
         })
       }
       return { running: !state.running }
