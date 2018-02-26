@@ -39,6 +39,15 @@ const AppIntro = styled.p`
   font-size: large;
 `
 
+const EmojiWrapper = styled.span.attrs({
+  role: 'img',
+  ariaLabel: 'nail polish'
+})``
+
+const CodeWrapper = styled.code`
+  font-size: 1.5rem;
+`
+
 const ComponentWrapper = styled.div``
 
 class App extends Component {
@@ -49,12 +58,14 @@ class App extends Component {
           <AppLogo src={logo} alt="logo" />
           <AppTitle>React Stopwatch</AppTitle>
         </AppHeader>
-        <AppIntro>Bootstrapped with `create-react-app`.</AppIntro>
         <AppIntro>
-          Components styled with styled-components{' '}
-          <span role="img" aria-label="nail polish">
-            💅
-          </span>
+          Bootstrapped with{' '}
+          <CodeWrapper>create-react-app</CodeWrapper>.
+        </AppIntro>
+        <AppIntro>
+          Components styled with{' '}
+          <CodeWrapper>styled-components</CodeWrapper>{' '}
+          <EmojiWrapper>💅</EmojiWrapper>
         </AppIntro>
         <ComponentWrapper>
           <Stopwatch />
