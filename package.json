@@ -10,11 +10,15 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && mv build stopwatch",
+    "build":
+      "npm run clean && react-scripts build && mv build stopwatch",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
+    "clean": "rm -rf stopwatch/ && rm -rf build/",
     "format":
-      "prettier es5 --no-semi --single-quote --write src/**/*.js"
+      "prettier es5 --no-semi --single-quote --write src/**/*.js",
+    "now:deploy": "npm run build && now stopwatch/",
+    "now:clean": "now rm stopwatch --safe --yes"
   },
   "pre-commit": ["format"],
   "devDependencies": {
