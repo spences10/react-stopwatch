@@ -22,6 +22,6 @@
   },
   "pre-commit": ["format"],
   "devDependencies": {
-    "prettier": "1.12.0"
+    "prettier": "1.12.1"
   }
 }
