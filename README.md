@@ -1,8 +1,9 @@
 # React Stopwatch Component
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/spences10/react-stopwatch.svg)](https://greenkeeper.io/)
+[![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com/)
 
-Stopwatch to demonstrate how to use state in React using styled-components 💅
+Stopwatch to demonstrate how to use state in React using
+styled-components 💅
 
 Demo of the code: https://stopwatch.scottspence.me/
 
