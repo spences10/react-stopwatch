@@ -10,7 +10,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "npm run clean && react-scripts build && mv build stopwatch",
+    "build": "npm run clean && react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "clean": "rm -rf stopwatch/ && rm -rf build/",
