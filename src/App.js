@@ -5,6 +5,7 @@ import styled from 'styled-components'
 import Stopwatch from './components/Stopwatch'
 
 import { HEROS } from './theme/themeConstants'
+import { GlobalStyle } from './theme/globalStyle'
 
 const AppWrapper = styled.div`
   text-align: center;
@@ -53,6 +54,7 @@ class App extends Component {
   render() {
     return (
       <AppWrapper>
+        <GlobalStyle />
         <AppHeader>
           <AppLogo src={logo} alt="logo" />
           <AppTitle>React Stopwatch</AppTitle>
