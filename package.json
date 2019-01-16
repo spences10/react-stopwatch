@@ -23,7 +23,7 @@
   ],
   "devDependencies": {
     "prettier": "1.15.3",
-    "pretty-quick": "1.8.0"
+    "pretty-quick": "1.8.1"
   },
   "browserslist": [
     ">0.2%",
