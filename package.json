@@ -22,7 +22,7 @@
     "format"
   ],
   "devDependencies": {
-    "prettier": "1.15.3",
+    "prettier": "1.16.0",
     "pretty-quick": "1.10.0"
   },
   "browserslist": [
