@@ -18,19 +18,9 @@
     "format"
   ],
   "devDependencies": {
-<<<<<<< HEAD
-<<<<<<< HEAD
     "@babel/core": "^7.4.3",
     "@babel/plugin-proposal-class-properties": "^7.4.0",
     "parcel-bundler": "^1.12.3",
-=======
-    "@babel/core": "7.4.3",
-    "@babel/plugin-proposal-class-properties": "7.4.0",
->>>>>>> Pin dependencies
-=======
-    "@babel/core": "7.4.3",
-    "@babel/plugin-proposal-class-properties": "7.4.0",
->>>>>>> 6eff66edd45fe4bb3f9b1b91db04ddbfe3beb9eb
     "prettier": "1.17.0",
     "pretty-quick": "1.10.0"
   },
