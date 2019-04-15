@@ -4,10 +4,10 @@
   "private": true,
   "dependencies": {
     "babel-plugin-styled-components": "1.10.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
     "react-scripts": "2.1.8",
-    "styled-components": "^4.2.0"
+    "styled-components": "4.2.0"
   },
   "scripts": {
     "dev": "parcel src/index.html -p 2020 --open",
