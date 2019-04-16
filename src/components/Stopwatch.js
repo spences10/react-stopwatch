@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react'
 import styled from 'styled-components'
+import { media } from '../theme/globalStyle'
 
 const Button = styled.button`
   font-size: 2rem;
@@ -23,6 +24,12 @@ const Label = styled.label`
   background: transparent;
   color: ${props => props.theme.dark};
   text-align: center;
+  ${media.tablet`
+    font-size: 3rem
+  `};
+  ${media.phone`
+    font-size: 3rem
+  `};
 `
 
 const time = ms => {
