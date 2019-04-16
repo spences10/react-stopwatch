@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import logo from './logo.svg'
 import styled, { keyframes } from 'styled-components'
+import Helmet from 'react-helmet'
 
 import { Stopwatch } from './components/Stopwatch'
 
@@ -59,6 +60,13 @@ class App extends Component {
     return (
       <AppWrapper>
         <GlobalStyle />
+        <Helmet
+          title={'React Stopwatch'}
+          titleTemplate={'titleTemplate'}>
+          <meta name="description" content={'a stopwatch in React'} />
+          {/* <meta name="image" content={seo.image} /> */}
+          <html lang={'en-GB'} />
+        </Helmet>
         <AppHeader>
           <AppLogo src={logo} alt="logo" />
           <AppTitle>React Stopwatch</AppTitle>
