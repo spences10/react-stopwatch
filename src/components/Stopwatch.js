@@ -17,6 +17,7 @@ const Button = styled.button`
 `
 
 const Label = styled.label`
+  display: block;
   font-size: 4rem;
   margin: 2rem;
   background: transparent;
@@ -57,9 +58,7 @@ export const Stopwatch = () => {
 
   return (
     <div style={{ textAlign: 'center' }}>
-      <label style={{ fontSize: '5em', display: 'block' }}>
-        {time(lapse)}
-      </label>
+      <Label>{time(lapse)}</Label>
       <Button onClick={handleRunClick}>
         {running ? 'Stop' : 'Start'}
       </Button>
