@@ -24,6 +24,10 @@ const Label = styled.label`
   text-align: center;
 `
 
+const time = ms => {
+  return new Date(ms).toISOString().slice(11, -1)
+}
+
 export const Stopwatch = () => {
   const [lapse, setLapse] = useState(0)
   const [running, setRunning] = useState(false)
@@ -54,7 +58,7 @@ export const Stopwatch = () => {
   return (
     <div style={{ textAlign: 'center' }}>
       <label style={{ fontSize: '5em', display: 'block' }}>
-        {lapse}ms
+        {time(lapse)}
       </label>
       <Button onClick={handleRunClick}>
         {running ? 'Stop' : 'Start'}
