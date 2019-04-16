@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import logo from './logo.svg'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 
 import { Stopwatch } from './components/Stopwatch'
 
@@ -20,18 +20,22 @@ const AppHeader = styled.div`
   background-image: url("${HEROS.TOPOGRAPHY}");
 `
 
+const rotate360 = keyframes`
+  from { 
+    transform: rotate(0deg); 
+  }
+  to { 
+    transform: rotate(360deg); 
+  }
+`
+
 const AppTitle = styled.h1``
 
 const AppLogo = styled.img`
-  animation: App-logo-spin infinite 120s linear;
+  animation: ${rotate360} infinite 5s linear;
   height: 80px;
-  @keyframes App-logo-spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
+  &:hover {
+    animation: ${rotate360} infinite 1s linear;
   }
 `
 
