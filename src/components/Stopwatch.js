@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useRef } from 'react'
 import styled from 'styled-components'
 
 const Button = styled.button`
@@ -24,50 +24,33 @@ const Label = styled.label`
   text-align: center;
 `
 
-class Stopwatch extends React.Component {
-  state = { lapse: 0, running: false }
+export const Stopwatch = () => {
+  const [lapse, setLapse] = useState(0)
+  const [running, setRunning] = useState(false)
+  const intervalRef = useRef(null)
 
-  handleRunClick = () => {
-    this.setState(state => {
-      if (state.running) {
-        clearInterval(this.timer)
-      } else {
-        const startTime = Date.now() - state.lapse
-        this.timer = setInterval(() => {
-          this.setState({
-            lapse: Date.now() - startTime
-          })
-        })
-      }
-      return { running: !state.running }
-    })
+  const handleRunClick = () => {
+    if (running) {
+      clearInterval(intervalRef.current)
+    } else {
+      const startTime = Date.now() - lapse
+      intervalRef.current = setInterval(() => {
+        setLapse(Date.now() - startTime)
+      }, 0)
+    }
+
+    setRunning(!running)
   }
 
-  componentWillUnmount() {
-    clearInterval(this.timer)
-  }
-
-  handleClearClick = () => {
-    clearInterval(this.timer)
-    this.setState({ running: false, lapse: 0 })
-  }
-
-  render() {
-    const { lapse, running } = this.state
-    return (
-      <div>
-        <div>
-          <Label>{lapse}ms</Label>
-        </div>
-        <div>
-          <Button onClick={this.handleRunClick}>
-            {running ? 'Stop' : 'Start'}
-          </Button>
-          <Button onClick={this.handleClearClick}>Clear</Button>
-        </div>
-      </div>
-    )
-  }
+  return (
+    <div style={{ textAlign: 'center' }}>
+      <label style={{ fontSize: '5em', display: 'block' }}>
+        {lapse}ms
+      </label>
+      <Button onClick={handleRunClick}>
+        {running ? 'Stop' : 'Start'}
+      </Button>
+      <Button>Clear</Button>
+    </div>
+  )
 }
-
-export default Stopwatch
