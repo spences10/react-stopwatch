@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import styled from 'styled-components'
 
 const Button = styled.button`
@@ -24,50 +24,46 @@ const Label = styled.label`
   text-align: center;
 `
 
-class Stopwatch extends React.Component {
-  state = { lapse: 0, running: false }
-
-  handleRunClick = () => {
-    this.setState(state => {
-      if (state.running) {
-        clearInterval(this.timer)
-      } else {
-        const startTime = Date.now() - state.lapse
-        this.timer = setInterval(() => {
-          this.setState({
-            lapse: Date.now() - startTime
-          })
-        })
-      }
-      return { running: !state.running }
-    })
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.timer)
-  }
-
-  handleClearClick = () => {
-    clearInterval(this.timer)
-    this.setState({ running: false, lapse: 0 })
-  }
-
-  render() {
-    const { lapse, running } = this.state
-    return (
-      <div>
-        <div>
-          <Label>{lapse}ms</Label>
-        </div>
-        <div>
-          <Button onClick={this.handleRunClick}>
-            {running ? 'Stop' : 'Start'}
-          </Button>
-          <Button onClick={this.handleClearClick}>Clear</Button>
-        </div>
-      </div>
-    )
-  }
+const time = ms => {
+  return new Date(ms).toISOString().slice(11, -1)
 }
 
-export default Stopwatch
+export const Stopwatch = () => {
+  const [lapse, setLapse] = useState(0)
+  const [running, setRunning] = useState(false)
+  const intervalRef = useRef(null)
+
+  useEffect(() => {
+    return () => clearInterval(intervalRef.current)
+  }, [])
+
+  const handleRunClick = () => {
+    if (running) {
+      clearInterval(intervalRef.current)
+    } else {
+      const startTime = Date.now() - lapse
+      intervalRef.current = setInterval(() => {
+        setLapse(Date.now() - startTime)
+      }, 0)
+    }
+    setRunning(!running)
+  }
+
+  const handleClearClick = () => {
+    clearInterval(intervalRef.current)
+    setLapse(0)
+    setRunning(false)
+  }
+
+  return (
+    <div style={{ textAlign: 'center' }}>
+      <label style={{ fontSize: '5em', display: 'block' }}>
+        {time(lapse)}
+      </label>
+      <Button onClick={handleRunClick}>
+        {running ? 'Stop' : 'Start'}
+      </Button>
+      <Button onClick={handleClearClick}>Clear</Button>
+    </div>
+  )
+}

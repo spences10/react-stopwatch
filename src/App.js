@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import logo from './logo.svg'
 import styled from 'styled-components'
 
-import Stopwatch from './components/Stopwatch'
+import { Stopwatch } from './components/Stopwatch'
 
 import { HEROS } from './theme/themeConstants'
 import { GlobalStyle } from './theme/globalStyle'
