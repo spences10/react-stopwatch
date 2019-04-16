@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import styled from 'styled-components'
 
 const Button = styled.button`
@@ -29,6 +29,10 @@ export const Stopwatch = () => {
   const [running, setRunning] = useState(false)
   const intervalRef = useRef(null)
 
+  useEffect(() => {
+    return () => clearInterval(intervalRef.current)
+  }, [])
+
   const handleRunClick = () => {
     if (running) {
       clearInterval(intervalRef.current)
@@ -38,8 +42,13 @@ export const Stopwatch = () => {
         setLapse(Date.now() - startTime)
       }, 0)
     }
-
     setRunning(!running)
+  }
+
+  const handleClearClick = () => {
+    clearInterval(intervalRef.current)
+    setLapse(0)
+    setRunning(false)
   }
 
   return (
@@ -50,7 +59,7 @@ export const Stopwatch = () => {
       <Button onClick={handleRunClick}>
         {running ? 'Stop' : 'Start'}
       </Button>
-      <Button>Clear</Button>
+      <Button onClick={handleClearClick}>Clear</Button>
     </div>
   )
 }
