@@ -1,28 +1,9 @@
 import { createGlobalStyle, css } from 'styled-components'
 
 export const theme = {
-  black: '#7d95b6',
   white: '#ffffff',
-  dark: '#4e5c6e',
-  light: '#755f9f',
-  green: '#8ac3a9',
-  yellow: '#fcdeb6',
-  red: '#ff8463',
-  pink: '#ff0198', // hollywood cerise
-  mySinYellow: '#ffb617', // my sin
-  purple: '#6e27c5', // purple heart
-  orange: '#ff6600', // blaze orange
-  blue: '#01c1d6', // robin's egg blue
-  java: '#1cbcd2', // java
-  sun: '#fab319', // sun
-  affair: '#69479e', // affair
-  flamingo: '#f16623', // flamingo
-  minsk: '#2e2e86', // minsk
-  pomegranate: '#ee362c', // pomegranate
-  redViolet: '#eb238e', // red violet
-  sushi: '#7cc142', // sushi
-  bombay: '#adadaf', // Bombay
-  jsYellow: '#f7e018' // JS yellow
+  dark: '#333333',
+  purple: '#6e27c5' // purple heart
 }
 
 export const GlobalStyle = createGlobalStyle`
