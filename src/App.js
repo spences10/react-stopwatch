@@ -62,7 +62,7 @@ class App extends Component {
         <GlobalStyle />
         <Helmet
           title={'React Stopwatch'}
-          titleTemplate={'titleTemplate'}>
+          titleTemplate={`%s | scottspence.me`}>
           <meta name="description" content={'a stopwatch in React'} />
           {/* <meta name="image" content={seo.image} /> */}
           <html lang={'en-GB'} />
