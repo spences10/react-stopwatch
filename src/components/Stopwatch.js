@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react'
 import styled from 'styled-components'
+import { media } from '../theme/globalStyle'
 
 const Button = styled.button`
   font-size: 2rem;
@@ -17,11 +18,18 @@ const Button = styled.button`
 `
 
 const Label = styled.label`
+  display: block;
   font-size: 4rem;
   margin: 2rem;
   background: transparent;
   color: ${props => props.theme.dark};
   text-align: center;
+  ${media.tablet`
+    font-size: 3rem
+  `};
+  ${media.phone`
+    font-size: 3rem
+  `};
 `
 
 const time = ms => {
@@ -57,9 +65,7 @@ export const Stopwatch = () => {
 
   return (
     <div style={{ textAlign: 'center' }}>
-      <label style={{ fontSize: '5em', display: 'block' }}>
-        {time(lapse)}
-      </label>
+      <Label>{time(lapse)}</Label>
       <Button onClick={handleRunClick}>
         {running ? 'Stop' : 'Start'}
       </Button>
