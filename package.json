@@ -1,6 +1,6 @@
 {
   "name": "react-stopwatch",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "private": true,
   "scripts": {
     "dev": "parcel src/index.html -p 2020 --open",
@@ -26,7 +26,7 @@
     "husky": "2.3.0",
     "parcel-bundler": "1.12.3",
     "prettier": "1.17.1",
-    "pretty-quick": "1.10.0"
+    "pretty-quick": "1.11.0"
   },
   "browserslist": [
     ">0.2%",
