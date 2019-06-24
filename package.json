@@ -1,6 +1,6 @@
 {
   "name": "react-stopwatch",
-  "version": "0.1.23",
+  "version": "0.1.24",
   "private": true,
   "scripts": {
     "dev": "parcel src/index.html -p 2020 --open",
@@ -14,7 +14,7 @@
     }
   },
   "dependencies": {
-    "babel-plugin-styled-components": "1.10.1",
+    "babel-plugin-styled-components": "1.10.2",
     "react": "16.8.6",
     "react-dom": "16.8.6",
     "react-helmet": "5.2.1",
