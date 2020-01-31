@@ -1,6 +1,6 @@
 {
   "name": "react-stopwatch",
-  "version": "0.1.68",
+  "version": "0.1.69",
   "private": true,
   "scripts": {
     "dev": "parcel src/index.html -p 2020 --open",
@@ -21,7 +21,7 @@
     "styled-components": "4.4.1"
   },
   "devDependencies": {
-    "@babel/core": "7.8.3",
+    "@babel/core": "7.8.4",
     "@babel/plugin-proposal-class-properties": "7.8.3",
     "husky": "4.2.1",
     "parcel-bundler": "1.12.4",
