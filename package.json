@@ -28,6 +28,13 @@
     "prettier": "2.0.4",
     "pretty-quick": "2.0.1"
   },
+  "prettier": {
+    "printWidth": 70,
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "proseWrap": "always"
+  },
   "browserslist": [
     ">0.2%",
     "not dead",
